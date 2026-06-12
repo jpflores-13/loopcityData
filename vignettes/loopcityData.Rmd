@@ -1,0 +1,66 @@
+---
+title: "Overview of loopcityData"
+output:
+  BiocStyle::html_document:
+    toc: true
+vignette: >
+  %\VignetteIndexEntry{Overview of loopcityData}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+```
+
+## Overview
+
+`loopcityData` provides the experimental data used in examples and vignettes
+for the [loopcity](https://sarmapar.com/loopcity/) package.
+
+Two datasets ship directly with the package (accessible via `data()`). Larger
+files — K562 Hi-C contact matrices and ChIP-seq bigWig tracks — are hosted on
+ExperimentHub and downloaded to a local cache on first use.
+
+## Shipped datasets
+
+```{r shipped}
+library(loopcityData)
+
+data(GM12878_10KbLoops)
+GM12878_10KbLoops
+
+data(GM12878_10KbLoopsChr21)
+GM12878_10KbLoopsChr21
+```
+
+## ExperimentHub datasets
+
+The K562 datasets from Bond et al. 2023 are retrieved via ExperimentHub.
+Files are downloaded once and cached locally by BiocFileCache.
+
+```{r hub, eval=FALSE}
+hic_path     <- K562_hic()
+loops_path   <- K562_loops()
+ctcf_path    <- K562_CTCF_bw()
+h3k27ac_path <- K562_H3K27ac_bw()
+```
+
+These paths can be passed directly to `loopcity` functions and
+`plotgardener` visualization functions. See the
+[plotgardener integration vignette](https://sarmapar.com/loopcity/articles/plotgardener-integration.html)
+in the `loopcity` package for a worked example.
+
+## Data provenance
+
+| Object | Accession | Reference |
+|---|---|---|
+| `GM12878_10KbLoops` / `GM12878_10KbLoopsChr21` | GSE63525 | Rao et al. 2014, *Cell* |
+| `K562_hic` / `K562_loops` | GSE214123 | Bond et al. 2023 |
+| `K562_CTCF_bw` / `K562_H3K27ac_bw` | GSE213908 | Bond et al. 2023 |
+
+## Session info
+
+```{r session}
+sessionInfo()
+```
