@@ -48,14 +48,14 @@ h3k27ac_path <- K562_H3K27ac_bw()
 
 These paths can be passed directly to `loopcity` functions and
 `plotgardener` visualization functions. See the
-[plotgardener integration vignette](https://sarmapar.com/loopcity/articles/plotgardener-integration.html)
-in the `loopcity` package for a worked example.
+[plotgardener integration vignette](https://sarmapar.com/loopcity/articles/
+plotgardener-integration.html) in the `loopcity` package for a worked example.
 
 ## Data provenance
 
 | Object | Accession | Reference |
 |---|---|---|
-| `GM12878_10KbLoops` / `GM12878_10KbLoopsChr21` | GSE63525 | Rao et al. 2014, *Cell* |
+| `GM12878_10KbLoops` / `GM12878_10KbLoopsChr21` | GSE63525 | Rao et al. 2014 |
 | `K562_hic` / `K562_loops` | GSE214123 | Bond et al. 2023 |
 | `K562_CTCF_bw` / `K562_H3K27ac_bw` | GSE213908 | Bond et al. 2023 |
 

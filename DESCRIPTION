@@ -1,18 +1,22 @@
 Package: loopcityData
 Title: Experimental Data for the loopcity Package
 Version: 0.99.0
-Authors@R: person("Sarah", "Parker", role = c("aut", "cre"),
-      email = "smp3800@gmail.com",
-      comment = c(ORCID = "0000-0002-2700-3979"))
-Description: Provides Hi-C loop calls and processed chromatin interaction data
-    used in examples and vignettes for the loopcity package. Small datasets
-    (GM12878 10 kb loop calls) are shipped directly; larger files (K562 Hi-C
-    contact matrices, CTCF and H3K27ac ChIP-seq signal tracks) are accessed
-    on demand via ExperimentHub.
+Authors@R: c(
+    person("Sarah", "Parker", role = c("aut", "cre"),
+           email = "smp3800@gmail.com",
+           comment = c(ORCID = "0000-0002-2700-3979")),
+    person("JP", "Flores", role = "aut",
+           email = "jflores@unc.edu"))
+Description: Provides Hi-C loop calls and chromatin interaction data used in
+    examples and vignettes for the loopcity package. Includes GM12878 Hi-C
+    loop calls at 10 kb resolution (Rao et al. 2014, GSE63525), shipped
+    directly as GInteractions objects. K562 Hi-C contact matrices and CTCF
+    and H3K27ac ChIP-seq signal tracks from Bond et al. 2023 (GSE214123,
+    GSE213908) are hosted on ExperimentHub and retrieved on demand.
 License: CC BY 4.0
 Encoding: UTF-8
 Depends:
-    R (>= 4.2.0),
+    R (>= 4.5.0),
     ExperimentHub
 Imports:
     AnnotationHub,
@@ -24,7 +28,7 @@ Suggests:
     BiocStyle
 VignetteBuilder: knitr
 biocViews: ExperimentHub, ExperimentData, Homo_sapiens_Data,
-    HighThroughputSequencing, HiC, ChIPSeq
+    SequencingData
 RoxygenNote: 7.3.2
-BugReports: https://github.com/sarmapar/loopcity/issues
-URL: https://github.com/sarmapar/loopcity
+BugReports: https://github.com/jpflores-13/loopcityData/issues
+URL: https://github.com/jpflores-13/loopcityData

@@ -40,8 +40,10 @@ NULL
     eh   <- .eh()
     hits <- query(eh, c("loopcityData", title))
     if (length(hits) == 0L)
-        stop("ExperimentHub record '", title, "' not found. ",
-             "Try BiocManager::install('loopcityData') to refresh the cache.")
+        stop(
+            "ExperimentHub record '", title, "' not found. ",
+            "Try BiocManager::install('loopcityData') to refresh cache."
+        )
     hits[[1L]]
 }
 
