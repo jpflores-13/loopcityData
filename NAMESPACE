@@ -1,2 +1,5 @@
-exportPattern("^[[:alpha:]]+")
+export(K562_hic)
+export(K562_loops)
+export(K562_CTCF_bw)
+export(K562_H3K27ac_bw)
 importFrom("ExperimentHub", "ExperimentHub")
