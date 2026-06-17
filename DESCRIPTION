@@ -3,10 +3,13 @@ Title: Experimental Data for the loopcity Package
 Version: 0.99.0
 Authors@R: c(
     person("Sarah", "Parker", role = c("aut", "cre"),
-           email = "smp3800@gmail.com",
-           comment = c(ORCID = "0000-0002-2700-3979")),
+        email = "smp3800@gmail.com",
+        comment = c(ORCID = "0000-0002-2700-3979")),
     person("JP", "Flores", role = "aut",
-           email = "jflores@unc.edu"))
+        email = "jflores@unc.edu"),
+    person("Howard Hughes Medical Institute", role = "fnd"),
+    person("National Institutes of Health", role = "fnd"),
+    person("National Science Foundation", role = "fnd"))
 Description: Provides Hi-C loop calls and chromatin interaction data used in
     examples and vignettes for the loopcity package. Includes GM12878 Hi-C
     loop calls at 10 kb resolution (Rao et al. 2014, GSE63525), shipped
@@ -16,7 +19,7 @@ Description: Provides Hi-C loop calls and chromatin interaction data used in
 License: CC BY 4.0
 Encoding: UTF-8
 Depends:
-    R (>= 4.5.0),
+    R (>= 4.6.0),
     ExperimentHub
 Imports:
     AnnotationHub,
@@ -25,10 +28,12 @@ Suggests:
     loopcity,
     knitr,
     rmarkdown,
-    BiocStyle
+    BiocStyle,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
 VignetteBuilder: knitr
 biocViews: ExperimentHub, ExperimentData, Homo_sapiens_Data,
-    SequencingData
-RoxygenNote: 7.3.2
+    SequencingData, ChIPSeqData, GEO
 BugReports: https://github.com/jpflores-13/loopcityData/issues
 URL: https://github.com/jpflores-13/loopcityData
+Config/roxygen2/version: 8.0.0

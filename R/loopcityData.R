@@ -26,14 +26,12 @@
 #'     bigWig.}
 #' }
 #'
-#' @docType package
-#' @name loopcityData-package
-#' @aliases loopcityData
-NULL
+"_PACKAGE"
 
 
 ## ---- Internal helper -------------------------------------------------------
 
+#' @importFrom AnnotationHub query
 .eh <- function() ExperimentHub::ExperimentHub()
 
 .get_resource <- function(title) {
@@ -59,8 +57,8 @@ NULL
 #' @return Character scalar — path to the cached \code{.hic} file.
 #' @export
 #' @examples
-#' \dontrun{
-#' hic_path <- K562_hic()
+#' if (interactive()) {
+#'     hic_path <- K562_hic()
 #' }
 K562_hic <- function() .get_resource("K562_hic")
 
@@ -72,8 +70,8 @@ K562_hic <- function() .get_resource("K562_hic")
 #' @return Character scalar — path to the cached loop calls \code{.txt} file.
 #' @export
 #' @examples
-#' \dontrun{
-#' loops_path <- K562_loops()
+#' if (interactive()) {
+#'     loops_path <- K562_loops()
 #' }
 K562_loops <- function() .get_resource("K562_loops")
 
@@ -85,8 +83,8 @@ K562_loops <- function() .get_resource("K562_loops")
 #' @return Character scalar — path to the cached bigWig file.
 #' @export
 #' @examples
-#' \dontrun{
-#' ctcf_path <- K562_CTCF_bw()
+#' if (interactive()) {
+#'     ctcf_path <- K562_CTCF_bw()
 #' }
 K562_CTCF_bw <- function() .get_resource("K562_CTCF_bw")
 
@@ -98,8 +96,8 @@ K562_CTCF_bw <- function() .get_resource("K562_CTCF_bw")
 #' @return Character scalar — path to the cached bigWig file.
 #' @export
 #' @examples
-#' \dontrun{
-#' h3k27ac_path <- K562_H3K27ac_bw()
+#' if (interactive()) {
+#'     h3k27ac_path <- K562_H3K27ac_bw()
 #' }
 K562_H3K27ac_bw <- function() .get_resource("K562_H3K27ac_bw")
 
