@@ -54,9 +54,9 @@ Authors:
 
 Other contributors:
 \itemize{
-  \item Howard Hughes Medical Institute [funder]
-  \item National Institutes of Health [funder]
-  \item National Science Foundation [funder]
+  \item Howard Hughes Medical Institute (Gilliam Fellows Program, GT16825, to J.P.F.) [funder]
+  \item National Institutes of Health (R35-GM128645, to D.H.P.) [funder]
+  \item National Science Foundation (Graduate Research Fellowship Program, DGE-1650116, to S.M.P.) [funder]
 }
 
 }

@@ -7,9 +7,12 @@ Authors@R: c(
         comment = c(ORCID = "0000-0002-2700-3979")),
     person("JP", "Flores", role = "aut",
         email = "jflores@unc.edu"),
-    person("Howard Hughes Medical Institute", role = "fnd"),
-    person("National Institutes of Health", role = "fnd"),
-    person("National Science Foundation", role = "fnd"))
+    person("Howard Hughes Medical Institute", role = "fnd",
+        comment = "Gilliam Fellows Program, GT16825, to J.P.F."),
+    person("National Institutes of Health", role = "fnd",
+        comment = "R35-GM128645, to D.H.P."),
+    person("National Science Foundation", role = "fnd",
+        comment = "Graduate Research Fellowship Program, DGE-1650116, to S.M.P."))
 Description: Provides Hi-C loop calls and chromatin interaction data used in
     examples and vignettes for the loopcity package. Includes GM12878 Hi-C
     loop calls at 10 kb resolution (Rao et al. 2014, GSE63525), shipped

@@ -13,14 +13,31 @@ vignette: >
 knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
 ```
 
-## Overview
+## Introduction
 
 `loopcityData` provides the experimental data used in examples and vignettes
-for the [loopcity](https://sarmapar.com/loopcity/) package.
+for the [loopcity](https://sarmapar.com/loopcity/) package. It includes GM12878
+Hi-C loop calls at 10 kb resolution (Rao et al. 2014, GSE63525), shipped
+directly as `GInteractions` objects, along with K562 Hi-C contact matrices and
+CTCF and H3K27ac ChIP-seq signal tracks from Bond et al. 2023 (GSE214123,
+GSE213908), hosted on ExperimentHub and retrieved on demand.
 
-Two datasets ship directly with the package (accessible via `data()`). Larger
-files — K562 Hi-C contact matrices and ChIP-seq bigWig tracks — are hosted on
-ExperimentHub and downloaded to a local cache on first use.
+Two datasets ship directly with the package (accessible via `data()`) and are
+loaded immediately. Larger files — K562 Hi-C contact matrices and ChIP-seq
+bigWig tracks — are hosted on ExperimentHub and downloaded to a local cache on
+first use.
+
+## Installation
+
+`loopcityData` is a Bioconductor package and should be installed via
+`BiocManager`:
+
+```{r install, eval=FALSE}
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("loopcityData")
+```
 
 ## Shipped datasets
 
